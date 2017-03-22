@@ -62,7 +62,7 @@ public class NoteController {
 	@ExceptionHandler(ServiceException.class)
 	@RequestMapping(value = "/get/ALL", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ArrayList<Note> getAll() throws ServiceException, IOException {
-		LOGGER.info("Getting the note details by name");
+		LOGGER.info("Getting  all the note details");
 		ArrayList<Note> notes = service.getAll();
 		LOGGER.info("Successfully got  all the notes");
 		return notes;
@@ -73,9 +73,9 @@ public class NoteController {
 	public void delete(
 			@RequestParam(value = "name", required = true) String name)
 			throws ServiceException, IOException {
-		LOGGER.info("Getting the note details by name");
+		LOGGER.info("Deleting  the note details by name");
 		service.deleteNote(name);
-		LOGGER.info("Successfully got the notes details by name");
+		LOGGER.info("Successfully deleted the notes & details by name");
 
 	}
 
