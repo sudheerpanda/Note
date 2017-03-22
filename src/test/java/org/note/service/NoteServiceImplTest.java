@@ -1,22 +1,16 @@
 
 package org.note.service;
 
-import java.io.IOException;
-
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.note.application.NoteApplication;
-import org.note.exception.ServiceException;
-import org.note.model.Note;
-import org.note.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * 
- * @author sudheerp This class is used to test the samples
+ * @author sudheerp This class is used to test the notes
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes={NoteApplication.class})
