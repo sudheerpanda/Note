@@ -34,7 +34,7 @@ public class NoteController {
 	NoteService service;
 
 	/**
-	 * This method is used to get the details of the sample product by name
+	 * This method is used to get the details note by name
 	 * 
 	 */
 	@ExceptionHandler(ServiceException.class)
@@ -49,6 +49,13 @@ public class NoteController {
 		return note;
 	}
 
+	/**
+	 * This will add the note into map for later use
+	 * @param note
+	 * @return
+	 * @throws ServiceException
+	 * @throws IOException
+	 */
 	@ExceptionHandler(ServiceException.class)
 	@RequestMapping(value = "/add", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ArrayList<Note> add(@RequestBody Note note) throws ServiceException,
@@ -59,6 +66,12 @@ public class NoteController {
 		return notes;
 	}
 
+	/**
+	 * This method is used to get all the notes added into map
+	 * @return
+	 * @throws ServiceException
+	 * @throws IOException
+	 */
 	@ExceptionHandler(ServiceException.class)
 	@RequestMapping(value = "/get/ALL", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ArrayList<Note> getAll() throws ServiceException, IOException {
@@ -68,6 +81,12 @@ public class NoteController {
 		return notes;
 	}
 
+	/**
+	 * This method is used to delete the note from map by name
+	 * @param name
+	 * @throws ServiceException
+	 * @throws IOException
+	 */
 	@ExceptionHandler(ServiceException.class)
 	@RequestMapping(value = "/delete", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public void delete(
