@@ -1,7 +1,7 @@
 /*
  * Copyright 2016-2017 the original author or authors.
  *
- * Licensed under Imaginea Technologies pvt limited
+ * Licensed under  XXXX
  */
 package org.note.application;
 
