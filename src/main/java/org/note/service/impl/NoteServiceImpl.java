@@ -1,8 +1,4 @@
-/*
- * Copyright 2016-2017 the original author or authors.
- *
- * Licensed under Imaginea Technologies pvt limited
- */
+
 package org.note.service.impl;
 
 import java.io.IOException;
