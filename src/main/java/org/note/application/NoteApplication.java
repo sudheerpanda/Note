@@ -14,7 +14,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  * 
- * @author sudheerp 
+ * @author sudheer panda
  * 			This class is used to  configure the
  *         application/starting the server embeded to th spring boot. By default
  *         tomcat is embdded to spring boot.we can change the port,threads etc..

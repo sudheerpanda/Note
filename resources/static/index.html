@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />
-  </head>
-  <body ng-app="myApp">
-    <div class="container" ng-controller="noteController">
-      <div class="page-header">
-      <h1>Add Note</h1>
- 	</div>
-   
-    <form class="form-horizontal" role="form" ng-submit="submit()">
-    Note : <input type="text" name="noteName" value={{note.name}}><br>
-    Message : <textarea rows="2" cols="40">{{note.message}}</textarea>
-    <button ng-click="submit()">Save</button>
-    <div class="form-group" ng-repeat="note in notes">
-    {{note.name}}  :   
-    <button ng-click="edit({{note.name}})">Edit</button>
-    <button ng-click="submit()">Delete</button><br>
+<head>
+    <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css"/>
+</head>
+<body ng-app="myApp">
+<div class="container" ng-controller="noteController">
+    <div class="page-header">
+        <h1>Add Note</h1>
     </div>
+
+    <form>
+        <div class="form-group">
+            Title : <input type="text" name="name" class="form-control" ng-model="note.name"><br>
+            Note :<input type="text" name="message" class="form-control" ng-model="note.message">
+
+            <button type="submit" ng-click="save()" class="btn btn-success">Save</button>
+        </div>
+         <div ng-if="notes.length"> 
+        	<div class="form-group" ng-repeat="note in notes">
+            {{note.name}}:
+            <button type="submit" class="btn btn-primary" ng-click="edit(note)">edit</button>
+            <button type="submit" class="btn btn-danger" ng-click="delete(note)">delete</button><br>
+        </div>
+        </div>
+        
     </form>
-    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
-    <script type="text/javascript" src="./bower_components/lodash/dist/lodash.min.js"></script>
-   <!-- <script type="text/javascript" src="./app/app.js"></script>-->
-    
-    <!--<script type="text/javascript" src="./app/services.js"></script>-->
-    <script type="text/javascript" src="./app/controller.js"></script>
-  </body>
+</div>
+<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+<!--<script type="text/javascript" src="./bower_components/lodash/dist/lodash.min.js"></script>-->
+<!-- <script type="text/javascript" src="./app/app.js"></script>-->
+
+<!--<script type="text/javascript" src="./app/services.js"></script>-->
+<script type="text/javascript" src="./ui/controller.js"></script>
+</body>
 </html>

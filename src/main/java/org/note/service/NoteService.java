@@ -1,4 +1,8 @@
-
+/*
+ * Copyright 2017-2018 the original author or authors.
+ *
+ * Licensed under xxxxxxxxx
+ */
 package org.note.service;
 
 import java.io.IOException;
@@ -8,8 +12,8 @@ import org.note.exception.ServiceException;
 import org.note.model.Note;
 
 /**
- * @author sudheerp
- *This interface is used  get the product sample details
+ * @author sudheer panda
+ *			This interface will do the CRUD operations on notes
  */
 public interface NoteService {
   

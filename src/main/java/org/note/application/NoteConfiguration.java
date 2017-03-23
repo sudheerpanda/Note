@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author sudheerp This class is used to configure the beans.
+ * @author 	sudheer panda
+ * 			 This class is used to configure the beans.
  */
 @Configuration
 public class NoteConfiguration {
@@ -23,7 +24,7 @@ public class NoteConfiguration {
 	 * This will create a note service bean
 	 */
 	@Bean
-	public NoteService getProductSampleService() {
+	public NoteService getNoteService() {
 		LOGGER.info("creating bean", NoteService.class);
 		NoteService service = new NoteServiceImpl();
 		LOGGER.info("Created bean", NoteService.class);

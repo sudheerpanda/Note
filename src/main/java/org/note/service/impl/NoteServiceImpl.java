@@ -1,4 +1,8 @@
-
+/*
+ * Copyright 2017-2018 the original author or authors.
+ *
+ * Licensed under xxxxxxxxx
+ */
 package org.note.service.impl;
 
 import java.io.IOException;
@@ -15,7 +19,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
- * @author sudheerp This class is used to get/add/delete/update a note
+ * @author 	sudheer panda 
+ * 			This class is used to get/add/delete/update a note
  */
 @Service
 public class NoteServiceImpl implements NoteService {
@@ -46,10 +51,11 @@ public class NoteServiceImpl implements NoteService {
 	@Override
 	public ArrayList<Note> addNote(Note note) throws ServiceException,
 			IOException {
-
+		LOGGER.info("Adding a not into map ,note is-{}",note);
 		if (note != null) {
 			notes.put(note.getName(), note);
 		}
+		LOGGER.info("Successfully added the note into map ,not is-{}",note);
 		return getAll();
 	}
 	/**
@@ -58,11 +64,16 @@ public class NoteServiceImpl implements NoteService {
 	@Override
 	public boolean deleteNote(String name) throws ServiceException, IOException {
 		boolean delFlag = false;
+		LOGGER.info("Deleing a note from map ,note name- {}",name);
 		if (name != null) {
 			Note note = notes.remove(name);
 			if (note != null) {
 				delFlag = true;
+				LOGGER.info("Successfully deleted the note from map,note name-{}",name);
 			}
+		}
+		if(!delFlag){
+			LOGGER.info("There is not note in this name ,SO deletion not happened & the note name -{}",name);
 		}
 		return delFlag;
 	}
@@ -72,12 +83,14 @@ public class NoteServiceImpl implements NoteService {
 	 */
 	@Override
 	public ArrayList<Note> getAll() throws ServiceException, IOException {
+		LOGGER.info("Getting all the note details from map");
 		ArrayList<Note> noteResponses = new ArrayList<Note>();
 		Iterator<Entry<String, Note>> notesIterator = notes.entrySet()
 				.iterator();
 		while (notesIterator.hasNext()) {
 			noteResponses.add(notesIterator.next().getValue());
 		}
+		LOGGER.info("Successfully got all the note,The total number of notes in map are -{}",noteResponses.size());
 		return noteResponses;
 	}
 

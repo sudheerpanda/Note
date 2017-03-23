@@ -1,4 +1,8 @@
-
+/*
+ * Copyright 2017-2018 the original author or authors.
+ *
+ * Licensed under xxxxxxxxx
+ */
 package org.note.application;
 
 import java.io.IOException;
@@ -22,7 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 
- * @author sudheerp This class is used to do CRUD operation on notes
+ * @author sudheer panda 
+ * 			This class is used to do CRUD operation on notes
  */
 @RestController
 @RequestMapping("/note")

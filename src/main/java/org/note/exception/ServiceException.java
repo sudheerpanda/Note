@@ -1,11 +1,20 @@
-
+/*
+ * Copyright 2017-2018 the original author or authors.
+ *
+ * Licensed under xxxxxxxxx
+ */
 package org.note.exception;
 
 /**
- * @author sudheerp
- *This class used to send the service level exception to ressource layer/cleint
+ * @author sudheer panda
+ *			This class used to send the service level exception to ressource layer/cleint
  */
 public class ServiceException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 
