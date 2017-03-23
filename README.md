@@ -2,5 +2,8 @@
 
 This will give the Rest Webservice to add/delete/edit.
 
-TODo:
-UI integration
+
+This is spring boot app
+
+Use packaging and jar to create and deploy and run.
+
